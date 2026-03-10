@@ -34,20 +34,7 @@ Fig 5 — ECE R138 SPL Compliance Map
 Show Image
 2D compliance surface over injection amplitude vs vehicle speed. The design operating point (★ at 9A) lies within the legal SPL zone across all AVAS-active speeds.
 
-🏗️ Simulink Model Architecture
-5 subsystems, fully auto-wired by the build script:
-[Speed Profile] ──► [Speed Controller] ──► i_q_traction ──► [Σ] ──► [FOC Controller]
-                          ▲ wr                               ▲               │ Vd, Vq
-                          │                                  │               ▼
-[AVAS ToneGen] ◄── v_kmh ◄── [wr→km/h] ◄── [PMSM Motor] ◄──────────────────┘
-      │ i_q_tone                               │ id,iq,we
-      └────────────────────────────────────────┘
-                                               │ iq_total
-                                        [Acoustic Monitor]
-                                             SPL [dB]
-SubsystemDescriptionPMSM_MotorFull dq-axis ODE model — id, iq, wr dynamicsFOC_ControllerPI current loops + decoupling feedforwardSpeed_ControllerOuter PI speed loop → i_q_tractionAVAS_ToneGen⭐ Sinusoidal i_q injection, speed-proportional frequencyAcoustic_Monitor2nd-order TF: current → vibration → SPL in dB
 
-🚀 Quick Start
 matlab% Step 1: Build the fully-wired Simulink model (one time)
 run('BUILD_FULL_PMSM_AVAS.m')
 
