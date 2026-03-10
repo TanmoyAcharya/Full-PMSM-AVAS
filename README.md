@@ -7,13 +7,7 @@ This project: The PMSM traction motor already on the vehicle generates the alert
 Standard AVAS:   Controller ──► Separate Speaker ──► Sound
 This Project:    Controller ──► q-axis Injection ──► Motor Vibration ──► Sound
 
-⚡ Core Physics
-iq(t)=iq,traction(t)⏟propels the car  +  Itone⋅sin⁡(2πftone⋅t)⏟makes the soundi_q(t) = \underbrace{i_{q,\text{traction}}(t)}_{\text{propels the car}} \;+\; \underbrace{I_{\text{tone}} \cdot \sin(2\pi f_{\text{tone}} \cdot t)}_{\text{makes the sound}}iq​(t)=propels the cariq,traction​(t)​​+makes the soundItone​⋅sin(2πftone​⋅t)​​
-The tone component creates periodic torque ripple which vibrates the motor housing like a speaker cone at exactly ftonef_{\text{tone}}
-ftone​ Hz — producing a real audible sound wave.
 
-Speed-proportional mapping (pitch rises as car approaches):
-ftone(v)=400+40⋅v[Hz],v∈[0,20] km/hf_{\text{tone}}(v) = 400 + 40 \cdot v \quad \text{[Hz]}, \quad v \in [0, 20] \text{ km/h}ftone​(v)=400+40⋅v[Hz],v∈[0,20] km/h
 
 📊 Simulation Results
 
