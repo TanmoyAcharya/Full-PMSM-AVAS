@@ -60,7 +60,11 @@ MATLAB R2021a+
 Simulink
 Control System Toolbox
 
+## Acknowledgements
 
+Developed with assistance from [Claude](https://claude.ai) (Anthropic) —
+used for Simulink model architecture, MATLAB scripting, debugging,
+and simulation analysis.
 📚 References
 
 UN Regulation No. 138 — Acoustic Vehicle Alert Systems (UNECE, 2018)
